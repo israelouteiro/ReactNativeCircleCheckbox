@@ -9,7 +9,8 @@
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {StyleSheet, Text, TouchableOpacity, View, ViewPropTypes} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types'
 
 export const LABEL_POSITION = {
   RIGHT: 'right',
@@ -29,7 +30,7 @@ export default class CircleCheckBox extends React.Component {
     onToggle: PropTypes.func.isRequired,
     labelPosition: PropTypes.oneOf([LABEL_POSITION.RIGHT, LABEL_POSITION.LEFT]),
     styleCheckboxContainer: ViewPropTypes.style,
-    styleLabel: Text.propTypes.style,
+    styleLabel: PropTypes.any,
   };
 
   static defaultProps = {
